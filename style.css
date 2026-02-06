@@ -1,0 +1,89 @@
+/* ===== Genel sayfa ayarları ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f0ff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+}
+
+/* ===== Başlık ayarları ===== */
+h1 {
+    background: linear-gradient(to right, #4da6ff, #1a75ff);
+    color: white;
+    padding: 20px;
+    margin: 0;
+    font-size: 2em;
+}
+
+h3 {
+    margin-top: 30px;
+    color: #004080;
+}
+
+hr {
+    margin: 20px auto;
+    width: 80%;
+    border: 1px solid #004080;
+}
+
+/* ===== Video ayarları ===== */
+video {
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 500px;
+}
+
+/* ===== Liste ve link ayarları ===== */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+a {
+    text-decoration: none;
+    color: #1a75ff;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== İkonlar ===== */
+.icon {
+    margin-right: 8px;
+    color: #1a75ff;
+}
+
+/* ===== Alt kısım ===== */
+.footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #004080;
+    color: white;
+}
+
+.footer a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+.footer a:hover {
+    color: #ffcc00;
+}
+
+/* ===== Küçük ekranlar için uyumluluk ===== */
+@media (max-width: 600px) {
+    video {
+        width: 90%;
+    }
+}
