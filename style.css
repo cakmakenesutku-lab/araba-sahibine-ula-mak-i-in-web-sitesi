@@ -87,3 +87,21 @@ a:hover {
         width: 90%;
     }
 }
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #003366;
+    padding: 12px;
+}
+
+.nav-link {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
