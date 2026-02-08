@@ -1,107 +1,221 @@
-/* ===== Genel sayfa ayarları ===== */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #e0f0ff;
+/* ===== GENEL ===== */
+* {
     margin: 0;
     padding: 0;
-    color: #333;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a5c); /* Modern koyu degrade */
+    color: #f5f5f5;
     text-align: center;
 }
 
-/* ===== Başlık ayarları ===== */
-h1 {
-    background: linear-gradient(to right, #4da6ff, #1a75ff);
-    color: white;
-    padding: 20px;
-    margin: 0;
-    font-size: 2em;
-}
-
-h3 {
-    margin-top: 30px;
-    color: #004080;
-}
-
-hr {
-    margin: 20px auto;
-    width: 80%;
-    border: 1px solid #004080;
-}
-
-/* ===== Video ayarları ===== */
-video {
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 500px;
-}
-
-/* ===== Liste ve link ayarları ===== */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin: 10px 0;
-    font-size: 1.1em;
-}
-
-a {
-    text-decoration: none;
-    color: #1a75ff;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* ===== İkonlar ===== */
-.icon {
-    margin-right: 8px;
-    color: #1a75ff;
-}
-
-/* ===== Alt kısım ===== */
-.footer {
-    margin-top: 50px;
-    padding: 20px;
-    background-color: #004080;
-    color: white;
-}
-
-.footer a {
-    color: white;
-    margin: 0 10px;
-    font-size: 1.5em;
-}
-
-.footer a:hover {
-    color: #ffcc00;
-}
-
-/* ===== Küçük ekranlar için uyumluluk ===== */
-@media (max-width: 600px) {
-    video {
-        width: 90%;
-    }
-}
+/* ===== NAVBAR ===== */
 .navbar {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     background-color: #003366;
-    padding: 12px;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .nav-link {
     color: white;
-    font-weight: bold;
-    text-decoration: none;
+    font-weight: 600;
     font-size: 1.1em;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 8px;
 }
 
 .nav-link:hover {
-    text-decoration: underline;
+    background: #ffcc00;
+    color: #003366;
+}
+
+/* ===== HERO / VIDEO ===== */
+.hero {
+    position: relative;
+    height: 90vh; /* daha etkileyici yükseklik */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    filter: brightness(0.35) contrast(1.2); /* dramatik video efekti */
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease forwards;
+    max-width: 90%;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 20px rgba(0,0,0,0.8);
+}
+
+.hero-content hr {
+    width: 100px;
+    border: 3px solid #ffcc00;
+    margin: 25px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* ===== İLETİŞİM ===== */
+.contact {
+    padding: 80px 20px;
+    background: linear-gradient(to right, #222244, #2e2e5a); /* Profesyonel koyu degrade */
+    text-align: center;
+    border-radius: 20px;
+    margin: -40px 20px 60px 20px; /* Hero ile yakın görünüm */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.contact h2 {
+    font-size: 2.2em;
+    color: #ffcc00;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.contact h2::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #ffcc00;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact li {
+    margin: 20px 0;
+}
+
+.contact a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #f5f5f5;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.4s ease;
+    background: rgba(255,255,255,0.05);
+    padding: 12px 20px;
+    border-radius: 15px;
+}
+
+.contact a:hover {
+    color: #003366;
+    background: #ffcc00;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* ICON RENKLERİ */
+.icon.phone { color: #00d1ff; }
+.icon.whatsapp { color: #25d366; }
+.icon.instagram { color: #e1306c; }
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #111133;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.footer a {
+    color: #fff;
+    font-size: 2em;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffcc00;
+    transform: scale(1.3);
+}
+
+/* ===== ANİMASYON ===== */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .contact h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .contact a {
+        font-size: 1.1em;
+    }
 }
