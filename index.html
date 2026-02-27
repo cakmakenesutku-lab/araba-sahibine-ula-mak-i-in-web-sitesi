@@ -1,63 +1,13 @@
-<!-- <!DOCTYPE html>
 
-<html> 
-    <head>
-      <title>
-    
-        27 BAR 514
-      </title>
-    </head>
-
-
-
-
-    <body>
-        sitede olmasını isredikleriniz body e yazılır 
-        <h1>
-             h1 den h6 ya kadar ayrı boyutlarda yazı büyüklükleri başlık boyutları var normal yazı için sadece p 
-            27 BAR 514 Araç Sahibi 
-            <hr>
-         <video src="0206.mp4"width="500px" autoplay loop muted></video>
-
-
-        </h1>
-
-            <h3>
-               Ulaşım bilgileri
-            </h3>   
-              <ul> 
-                <li> <a href="tel:+905399136870" target="_blank" title="Ara">  Araç sahibini ara </a> </li>
-              </ul>
-   
-          <br>
-            <h3>
-                Yedek ulaşım Bilgileri
-            </h3>
-        <ul>
-            <li>  <a href="tel:+905318895215" target="_blank" title="Ara"> Araç sahibine ulaşılamazsa yedek numara </a>  </li>
-        </ul>
-      
-
-
-
-            <audio id="bgMusic" src="flakitogilbeatz-beat-de-rap-underground-free-422985.mp3" loop></audio>
-
-            <script>
-             window.addEventListener('click', () => {
-             document.getElementById('bgMusic').play();
-             });
-            </script>
-
-
-    </body>
-</html> -->   
 <!DOCTYPE html>
+
+
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>27 BAR 514</title>
-    <meta name="description" content="27 BAR 514 Araç Sahibi">
+    <title>27 BAR 514 | Araç Sahibi</title>
+    <meta name="description" content="27 BAR 514 araç sahibine hızlıca ulaşın. Telefon, WhatsApp ve Instagram ile iletişim.">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
@@ -71,47 +21,101 @@
 
     <!-- NAVBAR -->
     <nav class="navbar">
-        <a href="index.html" class="nav-link">Ana Sayfa</a>
-        <a href="galeri.html" class="nav-link">Galeri</a>
+        <div class="nav-inner">
+            <a href="index.html" class="brand">27 BAR 514</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Ana Sayfa</a>
+                <a href="galeri.html" class="nav-link">Galeri</a>
+            </div>
+        </div>
     </nav>
 
-    <!-- HERO / GİRİŞ -->
+    <!-- HERO -->
     <header class="hero">
-        <video class="hero-video" src="WhatsApp Video 2026-02-06 at 23.07.39.mp4" autoplay muted loop playsinline></video>
+        <video class="hero-video"
+               src="WhatsApp Video 2026-02-06 at 23.07.39.mp4"
+               autoplay muted loop playsinline>
+        </video>
         <div class="hero-overlay"></div>
+
         <div class="hero-content">
+            <span class="hero-badge">
+                <i class="fas fa-car-side"></i>
+                Plaka: 27 BAR 514
+            </span>
             <h1>27 BAR 514 Araç Sahibi</h1>
-            <hr>
+            <p>Araca dair acil durumlarda veya bilgilendirme için araç sahibine hemen ulaşın.</p>
+            <hr class="hero-divider">
+
+            <div class="hero-actions">
+                <a href="tel:+905399136870" class="btn hero-btn primary">
+                    <i class="fas fa-phone"></i> Araç sahibini ara
+                </a>
+                <a href="https://wa.me/905399136870" target="_blank" class="btn hero-btn outline">
+                    <i class="fab fa-whatsapp"></i> WhatsApp’tan yaz
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- İLETİŞİM BÖLÜMÜ -->
-    <section class="contact">
-        <h2>Ulaşım Bilgileri</h2>
-        <ul>
-            <li><a href="tel:+905399136870"><i class="fas fa-phone icon phone"></i>Araç sahibini ara</a></li>
-            <li><a href="https://wa.me/905399136870" target="_blank"><i class="fab fa-whatsapp icon whatsapp"></i>WhatsApp'tan ulaş</a></li>
-            <li><a href="https://www.instagram.com/samet_yldrm27/" target="_blank"><i class="fab fa-instagram icon instagram"></i>Instagram</a></li>
-        </ul>
+    <main>
+        <section class="contact">
+            <div class="contact-inner">
+                <h2>Ulaşım Bilgileri</h2>
+                <p class="contact-text">
+                    Aşağıdaki kanallardan araç sahibine hızlıca ulaşabilirsiniz.
+                </p>
 
-        <h2>Yedek Ulaşım Bilgileri</h2>
-        <ul>
-            <li><a href="tel:+905318895215"><i class="fas fa-phone icon phone"></i>Yedek numara</a></li>
-        </ul>
-    </section>
+                <ul class="contact-list">
+                    <li>
+                        <a href="tel:+905399136870">
+                            <i class="fas fa-phone icon phone"></i>
+                            Araç sahibini ara
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/905399136870" target="_blank">
+                            <i class="fab fa-whatsapp icon whatsapp"></i>
+                            WhatsApp'tan ulaş
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/samet_yldrm27/" target="_blank">
+                            <i class="fab fa-instagram icon instagram"></i>
+                            Instagram profiline git
+                        </a>
+                    </li>
+                </ul>
+
+                <h3>Yedek Ulaşım Bilgileri</h3>
+                <ul class="contact-list">
+                    <li>
+                        <a href="tel:+905318895215">
+                            <i class="fas fa-phone icon phone"></i>
+                            Yedek numara
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
     <!-- ARKA PLAN MÜZİĞİ -->
-    <audio id="bgMusic" src="flakitogilbeatz-beat-de-rap-underground-free-422985.mp3" autoplay loop></audio>
+    <audio id="bgMusic"
+           src="flakitogilbeatz-beat-de-rap-underground-free-422985.mp3"
+           loop></audio>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>Bu gibi siteler için bize ulaşin: <strong>Code Source</strong></p>
+        <p>Bu tarz QR araç sitesi yaptırmak için <strong>CodeSource</strong> ile iletişime geçin.</p>
         <ul>
             <li><a href="tel:+905519275363"><i class="fas fa-phone icon phone"></i></a></li>
             <li><a href="https://wa.me/905519275363" target="_blank"><i class="fab fa-whatsapp icon whatsapp"></i></a></li>
             <li><a href="https://www.instagram.com/codesource_tr/" target="_blank"><i class="fab fa-instagram icon instagram"></i></a></li>
         </ul>
     </footer>
+
     <!-- JS -->
     <script src="script.js"></script>
 

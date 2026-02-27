@@ -4,41 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeri - 27 BAR 514</title>
+    <meta name="description" content="27 BAR 514 araç fotoğraf ve video galerisi.">
 
-    <!-- Ortak CSS -->
+    
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-    <!-- ÜST MENÜ -->
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <a href="index.html" class="nav-link">Ana Sayfa</a>
-        <a href="galeri.html" class="nav-link">Galeri</a>
+        <div class="nav-inner">
+            <a href="index.html" class="brand">27 BAR 514</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="galeri.html" class="nav-link active">Galeri</a>
+            </div>
+        </div>
     </nav>
 
-    <h1>
-        Galeri
-        <hr>
-    </h1>
+    <main class="page-main">
+        <section class="gallery-section">
+            <div class="gallery-header">
+                <h1>Galeri</h1>
+                <p>Araçtan birkaç görüntü ve video.</p>
+                <hr>
+            </div>
 
-    <!-- GALERİ ALANI -->
-    <div class="gallery">
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="araba.jpeg"
+                         alt="27 BAR 514 araç fotoğrafı"
+                         class="gallery-image">
+                </div>
 
-        <!-- FOTO -->
-        <img src="araba.jpeg" alt="Araç Fotoğrafı" style="width:500px; max-width:90%; border-radius:10px;">
-
-        <br><br>
-
-        <!-- VİDEO -->
-        <video 
-            src="WhatsApp Video 2026-02-06 at 23.07.39.mp4"
-            controls
-            muted
-            playsinline
-            style="width:500px; max-width:90%; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
-        </video>
-
-    </div>
+                <div class="gallery-item">
+                    <video
+                        src="WhatsApp Video 2026-02-06 at 23.07.39.mp4"
+                        controls
+                        muted
+                        playsinline
+                        class="gallery-video">
+                    </video>
+                </div>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
